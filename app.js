@@ -65,7 +65,7 @@ function initializeGame(mode) {
     
     // Set player names
     player1NameDiv.textContent = player1Input.value.trim();
-    player2NameDiv.textContent = mode === 'bot' ? 'Computer' : player2Input.value.trim();
+    player2NameDiv.textContent = mode === 'bot' ? 'Bot' : player2Input.value.trim();
     
     // Append player name divs
     player1.insertBefore(player1NameDiv, player1Input.nextSibling);
@@ -258,7 +258,7 @@ function switchMode(){
             input.value = '';
             input.disabled = false;
         })
-        player2Input.value = 'Computer';
+        player2Input.value = 'Bot';
         p2Initial = '0';
         player2Initial.value = p2Initial;
         if (playerTurn === p2Initial && gameActive) {
