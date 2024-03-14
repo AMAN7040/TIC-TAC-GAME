@@ -84,7 +84,7 @@ body{
 #gameContainer{
     display: flex;
     justify-content: center;
-    gap: 250px;
+    gap: 200px;
     margin: 12px;
     /* position: relative;
     display: inline-block; */
@@ -146,29 +146,228 @@ body{
     border: 2px solid red;
 }
 
-/* .dropdown-content{
-    display: none;
-    position: absolute;
-    background-color: orange;
-    z-index: 1;
-    padding: 2px;
-    margin: 2px;
-    border: 1px solid white;
-    border-radius: 15px;
-}
-.dropdown-content button {
-    display: block;
-    width: 100%;
-    padding: 5px;
-    margin: 5px 0;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-.gameContainer:hover .dropdown-content{
-    display: block;
-} */
 
+@media only screen and (max-width: 1000px){
+    #scoreCard{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        font-size: 23px;
+        padding: 26px;
+        margin:17px;
+        width: 80vh;
+        height: 5vh;
+        
+    }
+    #gameContainer{
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+        margin: 12px;
+        /* position: relative;
+        display: inline-block; */
+        /* height: 50px; */
+    }
+}
+
+@media only screen and (max-width: 900px){
+    #scoreCard{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        font-size: 23px;
+        padding: 26px;
+        margin:17px;
+        width: 70vh;
+        height: 5vh;
+        
+    }
+    #gameContainer{
+        display: flex;
+        justify-content: center;
+        gap: 120px;
+        margin: 12px;
+        /* position: relative;
+        display: inline-block; */
+        /* height: 50px; */
+    }
+}
+@media only screen and (max-width: 820px){
+    #scoreCard{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 20px;
+        padding: 26px;
+        margin:17px;
+        width: 60vh;
+        height: 10vh;
+        align-items: center;
+        
+        
+    }
+    #gameContainer{
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+        margin: 12px;
+        /* position: relative;
+        display: inline-block; */
+        /* height: 50px; */
+    }
+    #modeOptions,#restart,#resetScoreButton,#submitBtn,#playAgain{
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        background-color: #C62E65;
+        border-radius: 10px;
+        border: 1px solid white;
+        height: 40px;
+        padding: 5px;
+        margin: 10px;
+        cursor: pointer;
+        width: 75px
+    }
+    .box {
+        background-color: rgba(188, 188, 196, 0.484);
+        height: 15vmin;
+        width: 15vmin;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        border-radius: 10px;
+        border: 2px solid white;
+        cursor: pointer;
+        font-size: 45px;
+        box-shadow: rgba(140, 131, 131, 0.25) 0px 14px 28px, rgba(140, 129, 129, 0.22) 0px 10px 10px;;
+    }
+    #player1Input, #player2Input{
+        height: 25px;
+        width: 90px;
+        border: 3px solid green;
+        font-size: 11px;
+    }
+    #player1Initial,#player2Initial{
+        height: 25px;
+        width: 45px;
+        border: 3px solid green;
+        font-size: 11px;
+    }
+    #turn{
+        
+        font-size: 25px;
+    }
+
+}
+@media only screen and (max-width: 700px){
+    #scoreCard {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+        width: 90vmin;
+        justify-content: center;
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .score-separator {
+        flex: 0 0 auto;
+    }
+    #gameContainer{
+        display: flex;
+        justify-content: center;
+        gap: 44px;
+        margin: 12px;
+        flex-wrap: wrap;
+        /* position: relative;
+        display: inline-block; */
+        /* height: 50px; */
+    }
+    #modeOptions,#restart,#resetScoreButton,#playAgain{
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        background-color: #C62E65;
+        border-radius: 10px;
+        border: 1px solid white;
+        height: 40px;
+        padding: 5px;
+        margin: 10px;
+        cursor: pointer;
+        width: 40px
+    }
+    .box {
+        background-color: rgba(188, 188, 196, 0.484);
+        height: 13vmin;
+        width: 13vmin;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        border-radius: 10px;
+        border: 2px solid white;
+        cursor: pointer;
+        font-size: 38px;
+        box-shadow: rgba(140, 131, 131, 0.25) 0px 14px 28px, rgba(140, 129, 129, 0.22) 0px 10px 10px;;
+    }
+    #player1Input, #player2Input{
+        height: 20px;
+        width: 60px;
+        border: 3px solid green;
+        font-size: 11px;
+    }
+    #player1Initial,#player2Initial{
+        height: 20px;
+        width: 30px;
+        border: 3px solid green;
+        font-size: 11px;
+    }
+    #turn{
+        
+        font-size: 20px;
+    }
+    #submitBtn{
+        width: 50px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 260px){
+    #scoreCard {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        width: 70vmin;
+        justify-content: center;
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    .score-separator {
+        flex: 0 0 auto;
+    }
+    #player1Input, #player2Input{
+        height: 18px;
+        width: 35px;
+        border: 3px solid green;
+        font-size: 8px;
+    }
+    #player1Initial,#player2Initial{
+        height: 18px;
+        width: 25px;
+        border: 3px solid green;
+        font-size: 8px;
+    }
+    #turn{
+        
+     font-size: 18px;
+    }
+}
 
 
 
