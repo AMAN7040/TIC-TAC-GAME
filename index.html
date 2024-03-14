@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC-TAC GAME</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div id="head">
+        <h2 id="heading">TIC-TAC TOE</h2>
+    </div>
+    <div class="container">
+       <div id="scoreCard">
+          <!-- <input type="text" id="player1" required placeholder="enter player's 1 name"><br><br>
+          <input type="text" id="player2" required placeholder="enter player's 2 name"><br><br> -->
+          <div id="player1">
+            <!-- <div id="player1Name">player1 name</div>: -->
+            <input type="text" id="player1Initial" placeholder="Enter initial" required>
+            <input type="text" id="player1Input" placeholder="P1 Name" required>:
+            <div id="player1Score">score</div>
+          </div>
+          <div class="score-separator">|</div>
+          <div id="drawScore">Draws: </div>
+          <div class="score-separator">|</div>
+          <div id="player2">
+            <input type="text" id="player2Initial" placeholder="Enter initial" required>
+            <input type="text" id="player2Input" placeholder="P2 Name" required>:
+            <div id="player2Score">score</div>
+          </div>
+          <button id="submitBtn">Submit</button>
+        </div>
+        <div id="turn">Mode | Players turn</div>
+       <div class="board" id="board">
+          <div class="box" data-boxIndex="0"></div>
+          <div class="box" data-boxIndex="1"></div>
+          <div class="box" data-boxIndex="2"></div>
+          <div class="box" data-boxIndex="3"></div>
+          <div class="box" data-boxIndex="4"></div>
+          <div class="box" data-boxIndex="5"></div>
+          <div class="box" data-boxIndex="6"></div>
+          <div class="box" data-boxIndex="7"></div>
+          <div class="box" data-boxIndex="8"></div>
+        </div>
+        <div class="gameContainer" id="gameContainer">
+           <div id="modeOptions">Friend Mode</div>
+           <div id="resetScoreButton">Reset score</div>
+           <div id="playAgain">Play Again</div>
+           <div id="restart">Restart game</div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+

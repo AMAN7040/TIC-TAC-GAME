@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+#scoreCard{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 25px;
+    padding: 26px;
+    margin:17px;
+    width: 100vh;
+    height: 5vh;
+    
+}
+#player1,#player2,#drawScore,.score-separator{
+    display: flex;
+    gap: 4px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#player1Input, #player2Input{
+    height: 25px;
+    width: 100px;
+    border: 3px solid green;
+    font-size: 12px;
+}
+#player1Initial,#player2Initial{
+    height: 25px;
+    width: 60px;
+    border: 3px solid green;
+    font-size: 12px;
+}
+#turn{
+    
+    font-size: 30px;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px;
+    padding: 10px;
+    margin: 10px;
+    height:  60vmin;
+    width: 60vmin;
+}
+
+.box {
+    background-color: rgba(188, 188, 196, 0.484);
+    height: 18vmin;
+    width: 18vmin;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    font-size: 50px;
+    box-shadow: rgba(140, 131, 131, 0.25) 0px 14px 28px, rgba(140, 129, 129, 0.22) 0px 10px 10px;;
+}
+.box:hover{
+    background-color:rgba(184, 184, 190, 0.796);
+}
+#gameContainer{
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    margin: 12px;
+    /* position: relative;
+    display: inline-block; */
+    /* height: 50px; */
+}
+
+#modeOptions,#restart,#resetScoreButton,#submitBtn,#playAgain{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: #C62E65;
+    border-radius: 10px;
+    border: 1px solid white;
+    height: 40px;
+    padding: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+#restart:hover,
+#modeOptions:hover,
+#resetScoreButton:hover,
+#newGame:hover,
+#submitBtn:hover
+{
+    background-color: #DC6A94;
+}
+
+@keyframes winAnimate { 
+    0%{transform: scale(1);}
+    50%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+
+.winBox{
+    animation: winAnimate 0.5s ease-in-out infinite;
+    border: 2px solid green;
+}
+
+@keyframes drawAnimate {
+    0%,
+      100% {
+        transform: translateX(0);
+      }
+
+      25%,
+      75% {
+        transform: translateX(-5px);
+      }
+
+      50% {
+        transform: translateX(5px);
+      }
+}
+
+.drawBox{
+    animation: drawAnimate 0.5s ease-in-out;
+    border: 2px solid red;
+}
+
+/* .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: orange;
+    z-index: 1;
+    padding: 2px;
+    margin: 2px;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+.dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.gameContainer:hover .dropdown-content{
+    display: block;
+} */
+
+
+
+
