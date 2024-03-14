@@ -43,6 +43,25 @@ function initializePlayers() {
     p2Initial = player2Initial.value;
 }
 
+
+//EVENT LISTENERS
+submitBtn.addEventListener("click", handleSubmit);                   //submits the player details when clicke on button
+board.addEventListener('click',handlingBox);                         //triggeres the function when we click on the box
+restartButton.addEventListener("click", handleRestart);              //triggeres the function when clicked on the restart button
+resetScoreButton.addEventListener('click', handleReset);             //triggers when the rest button clicked
+playAgain.addEventListener('click', handleNewGame);                    //triggers when Play again is clicked
+modeOptions.addEventListener('click', switchMode);                   //Switches the mode between Friend mode and Bot mode
+
+
+//submits the details
+function handleSubmit(){
+    if (checkinputsFilled()) {
+        initializeGame(friendMode ? 'friend' : 'bot');
+    } else {
+        alert("Please fill out all player information before submitting.");
+    }
+}
+
 function checkinputsFilled() {
     const inputs = [player1Input, player1Initial, player2Input, player2Initial];
     return inputs.every(input => input.value.trim() !== "");
@@ -71,29 +90,10 @@ function initializeGame(mode) {
     player1.insertBefore(player1NameDiv, player1Input.nextSibling);
     player2.insertBefore(player2NameDiv, player2Input.nextSibling);
 }
-
-//EVENT LISTENERS
-submitBtn.addEventListener("click", handleSubmit);                   //submits the player details when clicke on button
-board.addEventListener('click',handlingBox);                         //triggeres the function when we click on the box
-restartButton.addEventListener("click", handleRestart);              //triggeres the function when clicked on the restart button
-resetScoreButton.addEventListener('click', handleReset);             //triggers when the rest button clicked
-playAgain.addEventListener('click', handleNewGame);                    //triggers when Play again is clicked
-modeOptions.addEventListener('click', switchMode);                   //Switches the mode between Friend mode and Bot mode
-
-
-//submits the details
-function handleSubmit(){
-    if (checkinputsFilled()) {
-        initializeGame(friendMode ? 'friend' : 'bot');
-    } else {
-        alert("Please fill out all player information before submitting.");
-    }
-}
-
 //function to check if initial entered cannot be changed i.e does not let the box to be clicked twice
 function handlingBox(e){
-      // Check if player names and initials are set
-      if (!p1Initial || !p2Initial || !player1Input.value.trim() || !player2Input.value.trim()) {
+    // Check if player names and initials are set
+    if (!p1Initial || !p2Initial || !player1Input.value.trim() || !player2Input.value.trim()) {
         // If names or initials are not set, return without updating the box content
         return;
     }

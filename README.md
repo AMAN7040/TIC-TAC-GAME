@@ -3,7 +3,7 @@ i have created a tic tac game with some additonal features
 
 
 so initally the game will start with the friend mode 
-first you have to enter(player 1) initial (any symbol you want to choose except X or O) and then type your name,
+first you have to enter(player 1) initial (any symbol you want to choose .....why only X or O) and then type your name,
 Same with player 2 and then press Submit button to assign the details.
 
 To play the game: 
